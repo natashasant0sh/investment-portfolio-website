@@ -1,5 +1,8 @@
 body {
-  background-color: #053B50;
+  height: 100vh;
+  background: #053B50;
+  background-image: linear-gradient(to bottom right,#053B50,85%, #32C6DA );
+  background-repeat: no-repeat;
 }
 
 code {
