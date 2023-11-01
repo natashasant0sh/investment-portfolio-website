@@ -4,14 +4,13 @@ import styled from 'styled-components';
 import logo from '../assets/logo.png'
 
 const Navigation = styled.nav`
-  width: 100%;
-  height: 100px; 
-  position: relative;
-  display: flex; 
-  justify-content: space-between; 
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 0; 
-  `;
+  max-width: 1240px;
+  margin: 0 auto; 
+  height: 100px;
+`;
   
 const Logo = styled.img`
   height: 60px; // adjust as needed
