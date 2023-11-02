@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import styled from 'styled-components';
+import Hero from '../components/Hero'
 
 const Background = styled.div`
 height: 100vh;
@@ -21,7 +22,8 @@ const Home = () => {
         <NavbarWrapper>
             <Navbar />
         </NavbarWrapper>
-      
+        <Hero/>
+
     </div>
     </Background>
   );

@@ -49,6 +49,9 @@ const NavButton = styled(Link)`
   border: 3px #32C6DA solid;
   padding: 10px 20px; 
   border-radius: 25px;
+  &:hover{
+    background-color: rgba(128,128,128,0.5);
+  }
 `;
 
 const Navbar = () => {
