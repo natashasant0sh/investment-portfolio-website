@@ -3,13 +3,16 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import logo from '../assets/logo.png'
 
+
+
 const Navigation = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1240px;
-  margin: 0 auto; 
-  height: 100px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1240px;
+    margin: 0 auto; 
+    height: 100px;
 `;
   
 const Logo = styled.img`
@@ -28,22 +31,24 @@ const NavButtons = styled.div`
 `;
 
   const NavLink = styled(Link)`
+  @import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Roboto+Mono:wght@300&display=swap');
   color: white; 
   text-decoration: none; 
   font-size: 20px;
-  font-family: Roboto Mono;
+  font-family: 'Roboto Mono', monospace;
   font-weight: 400;
 `;
 
 const NavButton = styled(Link)`
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Roboto+Mono:wght@300&display=swap');
   color: white; 
   text-decoration: none; 
   font-size: 20px;
-  font-family: Roboto Mono;
+  font-family: 'Roboto Mono', monospace;
   font-weight: 400;
   border: 3px #32C6DA solid;
   padding: 10px 20px; 
-  border-radius: 23px;
+  border-radius: 25px;
 `;
 
 const Navbar = () => {
