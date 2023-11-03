@@ -8,8 +8,8 @@ const Hero = () => {
         <div className='mt-[-96px] w-full h-screen text-center flex flex-col justify-center'>
             <h1 className='text-[#6499E9] text-4xl font-bold font-outfit p-2'>Your Financial Future!</h1> 
             <div className='flex items-center justify-center'> 
-                <p className='text-[#9EDDFF] text-5xl font-outfit font-bold'>Empower</p>
-                <Typed className='text-[#A6F6FF] text-5xl font-outfit font-bold pl-2' strings={['Investing.','Growing.','Succeeding.']} typeSpeed={120} backSpeed={140} loop/>
+                <p className='text-[#9EDDFF] text-5xl font-outfit font-bold'>Empowering</p>
+                <Typed className='text-[#A6F6FF] text-5xl font-outfit font-bold pl-2' strings={['Investments.','Growth.','Success.']} typeSpeed={130} backSpeed={150} loop/>
             </div>
             <div className='mt-3 text-white text-0.3rem font-roboto-mono'>
                 <p> Explore our world of investment opportunities, tailored to your unique goals and aspirations. Whether you're a seasoned investor or just getting started, we've got the tools, insights, and expertise to help you make confident decisions.</p>
