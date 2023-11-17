@@ -9,7 +9,7 @@ mongoose.connect("mongodb://0.0.0.0:27017/investment-portfolio-website")
 
 
 const newSchema=new mongoose.Schema({
-    email:{
+    name:{
         type:String,
         required:true
     },

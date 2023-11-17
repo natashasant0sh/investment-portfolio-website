@@ -14,10 +14,10 @@ app.get("/pages/Login",cors(),(req,res)=>{
 
 
 app.post("/pages/Login",async(req,res)=>{
-    const{email,password}=req.body
+    const{name,password}=req.body
 
     try{
-        const check=await collection.findOne({email:email})
+        const check=await collection.findOne({name:name})
 
         if(check){
             res.json("exist")
@@ -36,15 +36,15 @@ app.post("/pages/Login",async(req,res)=>{
 
 
 app.post("/pages/SignUp",async(req,res)=>{
-    const{email,password}=req.body
+    const{name,password}=req.body
 
     const data={
-        email:email,
+        name:name,
         password:password
     }
 
     try{
-        const check=await collection.findOne({email:email})
+        const check=await collection.findOne({name:name})
 
         if(check){
             res.json("exist")

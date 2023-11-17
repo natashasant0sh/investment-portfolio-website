@@ -6,7 +6,7 @@ import 'tailwindcss/tailwind.css'
 function Login() {
     const history=useNavigate();
 
-    const [email,setEmail]=useState('')
+    const [name, setName]=useState('')
     const [password,setPassword]=useState('')
 
     async function submit(e){
@@ -14,14 +14,14 @@ function Login() {
 
         try{
             await axios.post("http://localhost:8000/pages/SignUp",{
-                email,password
+                name,password
             })
             .then(res=>{
                 if(res.data==="exist"){
                     alert("User already exists")
                 }
                 else if(res.data==="notexist"){
-                    history("/dashboard",{state:{id:email}})
+                    history("/dashboard",{state:{id:name}})
                 }
             })
             .catch(e=>{
@@ -40,7 +40,7 @@ function Login() {
             <div className="p-8 bg-white rounded shadow-md w-80">
                 <h1 className="mb-4 text-xl font-bold text-center">Sign Up</h1>
                 <form action="POST">
-                    <input type="email" onChange={(e) => { setEmail(e.target.value) }} placeholder="Email" className="mb-3 w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" />
+                    <input type="text" onChange={(e) => { setName(e.target.value) }} placeholder="Name" className="mb-3 w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" />
                     <input type="password" onChange={(e) => { setPassword(e.target.value) }} placeholder="Password" className="mb-3 w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" />
                     <input type="submit" onClick={submit} className="w-full px-3 py-2 text-white bg-green-500 rounded-md cursor-pointer hover:bg-green-600" />
                 </form>
