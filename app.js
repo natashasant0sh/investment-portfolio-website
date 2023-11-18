@@ -13,25 +13,25 @@ app.get("/pages/Login",cors(),(req,res)=>{
 })
 
 
-app.post("/pages/Login",async(req,res)=>{
-    const{name,password}=req.body
+app.post("/pages/Login", async (req, res) => {
+    const { name, password } = req.body;
 
-    try{
-        const check=await collection.findOne({name:name})
+    try {
+        const user = await collection.findOne({ name: name });
 
-        if(check){
-            res.json("exist")
+        if (user) {
+            if (user.password === password) {
+                res.json("exist");
+            } else {
+                res.json("wrong password");
+            }
+        } else {
+            res.json("notexist");
         }
-        else{
-            res.json("notexist")
-        }
-
+    } catch (e) {
+        res.json("fail");
     }
-    catch(e){
-        res.json("fail")
-    }
-
-})
+});
 
 
 

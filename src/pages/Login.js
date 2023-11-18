@@ -22,6 +22,9 @@ function Login() {
                 if(res.data=="exist"){
                     history("/dashboard",{state:{id:name}})
                 }
+                else if(res.data=="wrong password"){
+                    alert("Incorrect password")
+                }
                 else if(res.data=="notexist"){
                     alert("User has not signed up")
                 }
