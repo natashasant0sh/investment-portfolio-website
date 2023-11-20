@@ -1,6 +1,8 @@
 import React from 'react'
 import Typed from 'react-typed'
 import stocks_png from '../assets/stocks_png.png'
+import { Link } from 'react-router-dom';
+
 const Hero = () => {
   return (
     <div className='mx-auto max-w-[1240px] flex items-end'>
@@ -14,9 +16,9 @@ const Hero = () => {
             <div className='mt-3 text-white text-0.3rem font-roboto-mono'>
                 <p> Explore our world of investment opportunities, tailored to your unique goals and aspirations. Whether you're a seasoned investor or just getting started, we've got the tools, insights, and expertise to help you make confident decisions.</p>
             </div>
-            <button className='bg-[#32C6DA] w-[180px] rounded-md font-medium my-6 mx-auto py-3 text-[ #053B50] font-outfit text-1.5xl transition-transform duration-400 ease-in-out hover:scale-110'> 
-                Get Started 
-            </button>
+            <Link to="/pages/SignUp" className='bg-[#32C6DA] w-[180px] rounded-md font-medium my-6 mx-auto py-3 text-[ #053B50] font-outfit text-1.5xl transition-transform duration-400 ease-in-out hover:scale-110'>
+                Get Started
+            </Link>
         </div>
         </div>
         
