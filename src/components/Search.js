@@ -1,13 +1,13 @@
 import React, {useState} from "react";
-import {mockSearchResults} from "../constants/mock";
 import SearchResults from "../components/SearchResults";
 import { XIcon, SearchIcon } from "@heroicons/react/solid";
+import { searchSymbol } from "../api/stock-api";
 
 const Search = () => {
    
     const [input, setInput] = useState("");
 
-    const [bestMatches, setBestMatches] = useState(mockSearchResults.result);
+    const [bestMatches, setBestMatches] = useState([]);
 
     const clear = () => {
         setInput(" ");
@@ -15,7 +15,17 @@ const Search = () => {
     };
 
     const updateBestMatches = async () => {
-        setBestMatches(mockSearchResults.results);
+        try {
+            if (input) {
+              const searchResults = await searchSymbol(input);
+              const result = searchResults.result;
+              setBestMatches(result);
+            }
+          } catch (error) {
+            setBestMatches([]);
+            console.log(error);
+          }
+        
     };
 
     return (<div className="flex items-center my-4 border-2 rounded-md relative z-50 w-96 bg-white border-neutral-200">
