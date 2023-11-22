@@ -9,13 +9,16 @@ import SignUp from './pages/SignUp';
 import Dashboard from './pages/Dashboard';
 import StockDetails from "./pages/StockDetails"
 import StockContext from './context/StockContext';
+import UserContext from './context/UserContext';
 
 function App() {
 
   const [stockSymbol, setStockSymbol] = useState("MSFT");
+  const [userState, setUserState] = useState(null);
 
   return (
     <Router>
+      <UserContext.Provider value={{ userState, setUserState }}>
       <StockContext.Provider value={{stockSymbol, setStockSymbol}}>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -28,6 +31,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
       </StockContext.Provider>
+      </UserContext.Provider>
       </Router>
   );
 }

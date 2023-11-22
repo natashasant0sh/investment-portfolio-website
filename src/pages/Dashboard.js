@@ -1,13 +1,14 @@
 import React, {useContext, useEffect, useState} from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import styled from 'styled-components';
 import Card from '../components/Card'
 import Header from "../components/Header"
 import Details from "../components/Details"
 import Overview from "../components/Overview"
 import Chart from "../components/Chart"
-import { Link } from 'react-router-dom'
 import StockContext from '../context/StockContext';
 import { fetchStockDetails, fetchQuote } from '../api/stock-api';
+import UserContext from '../context/UserContext';
 
 
 const Background = styled.div`
@@ -23,8 +24,12 @@ function Dashboard () {
 
     const { stockSymbol } = useContext(StockContext)
 
+    const { setUserState } = useContext(UserContext);
     const [stockDetails, setStockDetails] = useState({});
     const [quote, setQuote] = useState({});
+
+    const location=useLocation()
+
 
     useEffect(() => {
         const updateStockDetails = async () => {
@@ -51,16 +56,17 @@ function Dashboard () {
         updateStockOverview();
       }, [stockSymbol]);
 
+
     return (
         <Background>
         <div className="h-screen grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-rows-8 md:grid-rows-7 xl:grid-rows-5 auto-rows-fr gap-6 p-10 font-quicksand">
             <div className="col-span-1 md:col-span-2 xl:col-span-3 row-span-1 flex justify-between items-center"> 
                 <Header name={stockDetails.name}/>
                 <div className="flex-grow" /> 
-                <Link to={{
-                    pathname: "/StockDetails",
-                    state: { stockDetails: stockDetails }
-                }}>
+                <Link
+                    to="/StockDetails"
+                    onClick={() => setUserState({ userName: location.state.id, stockDetails })}
+                >
                     <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-12 rounded shadow-lg">
                         Invest
                     </button>

@@ -68,6 +68,35 @@ app.post("/pages/SignUp", async (req, res) => {
 
 })
 
+app.post("/purchase", async (req, res) => {
+    console.log(req.body);
+    const { name, stockName, stockSymbol, shareOutstanding, amountPurchased } = req.body;
+
+    const purchase = {
+        stockName: stockName,
+        stockSymbol: stockSymbol,
+        shareOutstanding: shareOutstanding,
+        amountPurchased: amountPurchased,
+        purchaseDate: new Date()
+    }
+
+
+    try{
+        const user = await collection.findOne({ name: name });
+        if (user) {
+            user.purchases.push(purchase);
+            console.log(user);
+            await user.save();
+            res.json("success");
+        } else {
+            res.json("user not found");
+        }
+    }
+    catch(e){
+        res.json("fail")
+    }
+});
+
 app.listen(8000,()=>{
     console.log("port connected");
 })
