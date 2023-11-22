@@ -1,25 +1,29 @@
 # Investment Portfolio Website
 
-This is a web application for managing an investment portfolio. It allows users to sign up, log in, and purchase stocks. It also provides financial news and detailed information about each stock.
+Welcome to the Investment Portfolio Website, your one-stop solution for managing your investments! This dynamic web application allows you to take control of your financial future. Sign up, log in, and start exploring a world of investment opportunities. 
+
+Our standout feature is the interactive dashboard, where you can dive deep into the details of each stock. View stock performance with our dynamic chart, offering a range of timeframes from 1 day to 1 year. Get a quick snapshot of your chosen stock with our overview feature, and delve into the nitty-gritty with our detailed stock information. Our intuitive search bar makes it easier to find your desired stock!
 
 ## Features
 
-- User authentication: Sign up and log in functionality with bcrypt encryption for password security.
-- Stock purchase: Users can purchase stocks and the details are saved in their portfolio.
-- Stock details: Detailed information about each stock is provided.
-- Financial news: Top financial news headlines are displayed.
-- Stock search: Users can search for stocks using the search bar.
-- Dashboard: Displays an overview of the stock and its details.
+- User authentication: Secure sign up and log in functionality with bcrypt encryption.
+- Stock purchase: Buy stocks with ease and track your purchases in your personal portfolio.
+- Stock details: Get the lowdown on each stock with detailed information.
+- Financial news: Stay in the loop with top financial news headlines.
+- Stock search: Find your next investment with our easy-to-use search bar.
+- Interactive Dashboard: Your personal investment hub, featuring a dynamic stock performance chart, quick overview, and detailed stock information.
 
 ## Technologies Used
 
-- React.js: Frontend library for building the user interface.
-- Node.js and Express.js: Backend server.
-- MongoDB: Database for storing user data and their portfolio.
-- Axios: For making HTTP requests.
-- News API: For fetching financial news.
-- Finnhub API: For fetching stock details.
-- bcrypt: For encrypting user passwords.
+- React.js: For building a dynamic and interactive user interface.
+- Node.js and Express.js: Powering our reliable backend server.
+- MongoDB: Securely storing user data and portfolio information.
+- Axios: Making HTTP requests simple and efficient.
+- News API: Keeping you updated with the latest financial news.
+- Finnhub API: Fetching detailed stock information.
+- bcrypt: Ensuring your password security.
+- Recharts: Bringing your stock performance to life with interactive charts.
+- Tailwind CSS: Styling our app with a modern and responsive design.
 
 ## How to Run the Project
 
