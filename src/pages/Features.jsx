@@ -7,7 +7,7 @@ import DelImage from '../assets/money2.png';
 import VisImage from '../assets/money3.png';
 
 const Background = styled.div`
-  height: 100vh;
+  height: 100%;
   background: #053B50;
   background-image: linear-gradient(to bottom right, #053B50, 85%, #32C6DA);
   background-repeat: no-repeat;
