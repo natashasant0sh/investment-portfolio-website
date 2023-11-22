@@ -69,7 +69,7 @@ app.post("/pages/SignUp", async (req, res) => {
 })
 
 app.post("/purchase", async (req, res) => {
-    console.log(req.body);
+    //console.log(req.body);
     const { name, stockName, stockSymbol, shareOutstanding, amountPurchased } = req.body;
 
     const purchase = {

@@ -29,10 +29,10 @@ const StockDetails = () => {
           });
   
           if (response.data === "success") {
-            response.json("buying success");
+            alert("successfully purchased!")
           } else {
             // handle error (e.g., show an error message)
-            response.json("buying fail");
+            response.json("purchase fail");
           }
         } catch (error) {
           console.error(error);
