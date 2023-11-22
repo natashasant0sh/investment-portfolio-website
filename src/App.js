@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Features from './pages/Features';
-import About from './pages/About';
+import News from './pages/News';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
@@ -23,7 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/pages/Features" element={<Features />} />
-        <Route path="/pages/About" element={<About />} />
+        <Route path="/pages/News" element={<News />} />
         <Route path="/pages/Contact" element={<Contact />} />
         <Route path="/pages/Login" element={<Login />} />
         <Route path="/pages/SignUp" element={<SignUp />} />
