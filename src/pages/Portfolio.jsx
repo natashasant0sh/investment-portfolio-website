@@ -95,7 +95,7 @@ const Portfolio = () => {
           <div className="p-2">
             <div className="bg-white rounded shadow-xl p-4 w-[400px] h-[300px]">
               <img src={stockDetails.logo} alt={stockDetails.name} className="w-32 h-32 mx-auto mt-4 mb-4" />
-              <h2 className="text-center font-bold  font-outfit text-black"> You Just Purchased {stockSymbol}</h2>
+              <h2 className="text-center font-bold  font-outfit text-black"> You Just Purchased {stockSymbol}!</h2>
               <h3 className="text-center font-bold font-outfit text-green-600 mt-8">Total Amount of Stocks Purchased: {totalAmountPurchased}</h3>
               <h3 className="text-center font-bold font-outfit text-green-700">Cumulative Shares Price: {totalSharesPrice}</h3>
             </div>
