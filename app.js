@@ -97,6 +97,16 @@ app.post("/purchase", async (req, res) => {
     }
 });
 
+app.get('/portfolio', async (req, res) => {
+    try {
+        const data = await collection.find({});
+        res.json(data);
+    } catch (e) {
+        console.error('Error fetching data from MongoDB:', e);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
 app.listen(8000,()=>{
     console.log("port connected");
 })
