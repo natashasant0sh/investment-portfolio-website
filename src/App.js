@@ -7,6 +7,7 @@ import Contact from './pages/Contact';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Dashboard from './pages/Dashboard';
+import Portfolio from './pages/Portfolio';
 import StockDetails from "./pages/StockDetails"
 import StockContext from './context/StockContext';
 import UserContext from './context/UserContext';
@@ -29,6 +30,8 @@ function App() {
         <Route path="/pages/SignUp" element={<SignUp />} />
         <Route path="/StockDetails" element ={<StockDetails/>}/>
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/pages/Portfolio" element={<Portfolio />} />
+
       </Routes>
       </StockContext.Provider>
       </UserContext.Provider>
