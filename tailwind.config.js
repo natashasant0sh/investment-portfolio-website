@@ -23,6 +23,7 @@ module.exports = {
         'outfit':['Outfit', 'sans-serif'],
         'roboto-mono':['Roboto Mono','monospace'],
         'quicksand': ['Quicksand', 'sans-serif'],
+        'arvo-bold':['Arvo', 'serif'],
   
       },
     },
